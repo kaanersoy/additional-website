@@ -1,0 +1,127 @@
+@font-face {
+    font-family: "Kastelov-Kinetika-Light";
+    src: url("./fonts/Kastelov-Kinetika-Light.otf");
+}
+@font-face {
+    font-family: "Kastelov-Kinetika-Ultra";
+    src: url("./fonts/Kastelov-Kinetika-Ultra.otf");
+}
+body{
+    scroll-behavior: smooth;
+}
+*{
+    box-sizing: border-box;
+    font-family: "Kastelov-Kinetika-Light";
+}
+body{
+    width: 100%;
+}
+*, body, html{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #101010;
+}
+header{padding: 15px; position: sticky; top: 0; left: 0;background-color: rgba(0, 0, 0, 0.2);}
+header .header-wrapper{display: flex;align-items: center; justify-content: space-between;}
+header .header-wrapper .logo{width: 80px;}
+header .header-wrapper .logo img{width: 100%; display: block;}
+header .header-wrapper .links{}
+header .header-wrapper .links ul{list-style-type: none;}
+header .header-wrapper .links ul li{ display: inline; margin: 0 10px;}
+header .header-wrapper .links ul li a{color: #fff; font-size: 20;text-decoration: none; font-weight: bold;}
+
+section.main-one{margin-bottom: 80px;}
+section.main-one .container{ width: 80%; margin: 0 auto;}
+section.main-one .container .content-box{ width: 100%;}
+section.main-one .container .content-box h1{ display: none;}
+section.main-one .container .content-box p{text-align: center; width: 100%;font-size: 80px; color: #fff;}
+section.main-one .container .content-box p span{display: inline; font-family:"Kastelov-Kinetika-Ultra";color: #b5d0ff; font-size: 130px; }
+section.main-one .container .content-box p:nth-child(3){font-size: 30px;padding: 20px 0;}
+
+
+section.main-two{margin-bottom: 100px;}
+section.main-two .container{ width: 90%; margin: 0 auto;}
+section.main-two .container .title{margin: 10px 0;}
+section.main-two .container .title h3{ font-size: 18px; font-family:"Kastelov-Kinetika-Ultra"; color: #414141; letter-spacing: 5px; text-transform: uppercase;}
+section.main-two .container .content{width: 35%; margin: 25px 0;}
+section.main-two .container .content p{ font-size: 30px; color: #fff; }
+section.main-two .container .links p {font-size: 25px; color: #a5a5a5;}
+section.main-two .container .links p span{margin: 0 10px;}
+section.main-two .container .links p a{font-family:"Kastelov-Kinetika-Ultra"; font-size: 23px; text-decoration: none; color: #b5d0ff;}
+
+section.main-three{padding: 30px;}
+section.main-three .container{ width: 90%; margin: 0 auto;}
+section.main-three .container .section-title{text-align: center; }
+section.main-three .container .section-title h3{font-size: 60px;font-family:"Kastelov-Kinetika-Ultra"; color:#b5d0ff; text-transform: uppercase;}
+section.main-three .container .content-wrapper{width: 100%; display: flex; flex-direction: column;}
+section.main-three .container .content-wrapper .box{width: 50%; display: block;margin: 50px 0;}
+section.main-three .container .content-wrapper .box .product-title{padding: 25px 0;}
+section.main-three .container .content-wrapper .box .product-title a{text-decoration: none;}
+section.main-three .container .content-wrapper .box .product-title h4{font-family:"Kastelov-Kinetika-Ultra";font-size: 35px;color: #fff;}
+section.main-three .container .content-wrapper .box .img-container{width: 100%;}
+section.main-three .container .content-wrapper .box .img-container a{text-decoration: none;}
+section.main-three .container .content-wrapper .box .img-container img{width: 100%; display: block;}
+section.main-three .container .content-wrapper .box.right{align-self: flex-end;}
+
+footer{padding-top: 50px; background-color: #161616;}
+footer .footer-wrapper{width: 90%; margin: 0 auto; padding: 50px 0; display: flex; justify-content: space-between; }
+footer .footer-wrapper .contacts{}
+footer .footer-wrapper .contacts ul{list-style-type: none;}
+footer .footer-wrapper .contacts ul li{}
+footer .footer-wrapper .contacts ul li a{padding: 3px 0;margin: 5px 0; display: inline-block; position: relative; text-decoration: none; font-size: 25px; font-family:"Kastelov-Kinetika-Ultra";color: #fff;}
+footer .footer-wrapper .contacts ul li a:after{content: ''; position: absolute; bottom: 0; left: 0; height: 3px; width: 0%;-webkit-transition: 200ms;transition: 200ms; background-color: #fff;}
+footer .footer-wrapper .contacts ul li a:hover::after{width: 100%;}
+footer .footer-wrapper .links{}
+footer .footer-wrapper .links .title{margin-bottom: 13px;}
+footer .footer-wrapper .links .title h4{font-size: 35px; font-family:"Kastelov-Kinetika-Ultra";color: #b5d0ff;}
+footer .footer-wrapper .links .pages{}
+footer .footer-wrapper .links .pages ul{list-style-type: none;}
+footer .footer-wrapper .links .pages ul li{}
+footer .footer-wrapper .links .pages ul li a{}
+footer .footer-wrapper .links .pages ul li a{padding: 3px;display: inline-block; text-decoration: none;position: relative;  font-size: 30px; font-family:"Kastelov-Kinetika-Ultra";color: #fff;}
+footer .footer-wrapper .links .pages ul li a:after{content: ''; position: absolute; bottom: 0; left: 0; height: 3px; width: 0%;-webkit-transition: 200ms;transition: 200ms; background-color: #fff;}
+footer .footer-wrapper .links .pages ul li a:hover::after{width: 100%;}
+
+@media screen and (max-width: 320px){
+    header .header-wrapper .logo{width: 35px;}
+    section.main-one{margin-bottom: 30px;}
+    section.main-one .container{width: 90%;}
+    section.main-one .container .content-box p{font-size: 44px;}
+    section.main-one .container .content-box p span{font-size: 65px;}
+    section.main-one .container .content-box p:nth-child(3){font-size: 18px;}
+    section.main-two .container .content {width: 100%;}
+    section.main-two .container .links p a{font-size: 30px;}
+    section.main-three{padding: unset; width: 90%;margin: 0 auto;}
+    section.main-three .container{width: 100%;}
+    section.main-three .container .section-title h3{font-size: 42px;}
+    section.main-three .container .content-wrapper{display: block;}
+    section.main-three .container .content-wrapper .box{width: 90%;margin: 35px auto;}
+    section.main-three .container .content-wrapper .box .product-title h4{font-size: 22px;}
+    footer{padding-top: 10px;}
+    footer .footer-wrapper{display: block;}
+    footer .footer-wrapper .contacts{ text-align: center;margin-bottom: 30px;}
+    footer .footer-wrapper .links{ text-align: center;}
+}
+@media screen and (min-width: 321px) and (max-width: 414px){
+    header .header-wrapper .logo{width: 35px;}
+    section.main-one{margin-bottom: 30px;}
+    section.main-one .container{width: 90%;}
+    section.main-one .container .content-box p{font-size: 44px;}
+    section.main-one .container .content-box p span{font-size: 65px;}
+    section.main-one .container .content-box p:nth-child(3){font-size: 18px;}
+    section.main-two .container .content {width: 100%;}
+    section.main-two .container .links p a{font-size: 30px;}
+    section.main-three{padding: unset; width: 90%;margin: 0 auto;}
+    section.main-three .container{width: 100%;}
+    section.main-three .container .section-title h3{font-size: 42px;}
+    section.main-three .container .content-wrapper{display: block;}
+    section.main-three .container .content-wrapper .box{width: 90%;margin: 35px auto;}
+    section.main-three .container .content-wrapper .box .product-title h4{font-size: 22px;}
+    footer{padding-top: 10px;}
+    footer .footer-wrapper{display: block;}
+    footer .footer-wrapper .contacts{ text-align: center;margin-bottom: 30px;}
+    footer .footer-wrapper .links{ text-align: center;}
+
+}
