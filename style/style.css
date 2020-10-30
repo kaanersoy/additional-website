@@ -6,7 +6,7 @@
     font-family: "Kastelov-Kinetika-Ultra";
     src: url("./fonts/Kastelov-Kinetika-Ultra.otf");
 }
-body{
+html{
     scroll-behavior: smooth;
 }
 *{
@@ -23,7 +23,7 @@ body{
 body{
     background-color: #101010;
 }
-header{padding: 15px; position: sticky; top: 0; left: 0;background-color: rgba(0, 0, 0, 0.2);}
+header{padding: 15px; position: sticky; top: 0; left: 0;background-color: rgba(0, 0, 0, 0.2); z-index: 999;}
 header .header-wrapper{display: flex;align-items: center; justify-content: space-between;}
 header .header-wrapper .logo{width: 80px;}
 header .header-wrapper .logo img{width: 100%; display: block;}
@@ -39,7 +39,6 @@ section.main-one .container .content-box h1{ display: none;}
 section.main-one .container .content-box p{text-align: center; width: 100%;font-size: 80px; color: #fff;}
 section.main-one .container .content-box p span{display: inline; font-family:"Kastelov-Kinetika-Ultra";color: #b5d0ff; font-size: 130px; }
 section.main-one .container .content-box p:nth-child(3){font-size: 30px;padding: 20px 0;}
-
 
 section.main-two{margin-bottom: 100px;}
 section.main-two .container{ width: 90%; margin: 0 auto;}
@@ -104,6 +103,7 @@ footer .footer-wrapper .links .pages ul li a:hover::after{width: 100%;}
     footer .footer-wrapper .contacts{ text-align: center;margin-bottom: 30px;}
     footer .footer-wrapper .links{ text-align: center;}
 }
+
 @media screen and (min-width: 321px) and (max-width: 414px){
     header .header-wrapper .logo{width: 35px;}
     section.main-one{margin-bottom: 30px;}
@@ -123,5 +123,4 @@ footer .footer-wrapper .links .pages ul li a:hover::after{width: 100%;}
     footer .footer-wrapper{display: block;}
     footer .footer-wrapper .contacts{ text-align: center;margin-bottom: 30px;}
     footer .footer-wrapper .links{ text-align: center;}
-
 }

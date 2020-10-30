@@ -10,6 +10,11 @@
     <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="icon" href="img/favicon.ico" />
+    <meta name="googlebot" content="index, follow">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Hi, I am Kaan Ersoy. I am a Web Developer and UI Designer. Over the 2 years, as a Web Developer and UI designer. I've worked in Saruhan Web Agency as a Intern Web Developer.">
+    <meta name="author" content="Kaan Ersoy">
+    <meta name="theme-color" content="#101010">
 </head>
 <body>
     <header>
@@ -46,7 +51,7 @@
                 <p>Over the 2 years, as a Web Developer and UI designer. I've worked in Saruhan Web Agency as a Intern Web Developer.</p>
             </div>
             <div class="links">
-                <p><a href="#products" title="Kaan Ersoy About">Read about me</a> <span>or</span> <a target="_blank" href="http://kaanersoy.com/blogs" title="Kaan Ersoy Blogs">look at my blogs</a></p>
+                <p><a href="http://kaanersoy.com/about" target="_blank" title="Kaan Ersoy About">Read about me</a> <span>or</span> <a target="_blank" href="http://kaanersoy.com/blogs" title="Kaan Ersoy Blogs">look at my blogs</a></p>
             </div>
         </div>
     </section>
@@ -55,7 +60,7 @@
             <div class="section-title">
                 <h3>Products</h3>
             </div>
-            <div class="content-wrapper">
+            <div class="content-wrapper" id="product-container">
                 <div class="box right">
                     <div class="product-title">
                         <a  href="http://kaanersoy.com/" title="Kaan Ersoy Website" target="_blank"><h4>Personal Website</h4></a>
@@ -69,21 +74,19 @@
                         <a href="https://www.eskisehirwebtasarim.com.tr/" title="Saruhan Web Agency" target="_blank"><h4>Company Website {Saruhan}</h4></a>
                     </div>
                     <div class="img-container">
-                        <a href="https://www.eskisehirwebtasarim.com.tr/" title="Saruhan Web Agency" target="_blank"><img src="img/project-2.jpg" alt="Kaan Ersoy Personal Website"></a>
+                        <a href="https://www.eskisehirwebtasarim.com.tr/" title="Saruhan Web Agency" target="_blank"><img src="img/project-2.jpg" alt="Company Website for Saruhan Web Agency"></a>
                     </div>
-
                 </div>
             </div>
-                
         </div>
     </section>
     <footer id="contact">
         <div class="footer-wrapper">
             <div class="contacts">
                 <ul>
-                    <li><a href="">LinkedIn</a></li>
-                    <li><a href="">Twitter</a></li>
-                    <li><a href="">UpWork</a></li>
+                    <li><a href="https://www.linkedin.com/in/kaan-ersoy-4507631a3/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://twitter.com/kaanersoy01" target="_blank">Twitter</a></li>
+                    <li><a href="https://www.upwork.com/freelancers/~01b41692961704cdd7" target="_blank">UpWork</a></li>
                 </ul>
                 
             </div>
@@ -93,11 +96,35 @@
                 </div>
                 <div class="pages">
                     <ul>
-                        <li><a href="">Blogs</a></li>
+                        <li><a href="http://kaanersoy.com/blogs" target="_blank">Blogs</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" integrity="sha512-wK2NuxEyN/6s53M8G7c6cRUXvkeV8Uh5duYS06pAdLq4ukc72errSIyyGQGYtzWEzvVGzGSWg8l79e0VkTJYPw==" crossorigin="anonymous"></script>
+    <script>
+        gsap.registerPlugin("ScrollTrigger");
+        var tl1 = gsap.timeline();
+        let main1Childs = gsap.utils.toArray("#about>.container>.content-box");
+        main1Childs.forEach((element) => {
+            gsap.from(element, {y:50, opacity: 0, ease: Power4.ease, duration: 0.8});
+        });
+        let main2Childs = gsap.utils.toArray(".main-two>.container");
+        var counter1 = 0;
+        main2Childs.forEach((element) => {
+            if(counter1 == 0){
+                tl1.from(element, {y: 70, opacity: 0, ease: Power4.ease, duration:0.8});
+                counter1++;
+            }else{
+                tl1.from(element, {y: 70, opacity: 0, ease: Power4.ease, duration:0.6}, "-=0.2");
+            }
+        });
+        var productChilds = gsap.utils.toArray(document.getElementById("product-container").children);
+        productChilds.forEach((element) => {
+            gsap.from(element, {scrollTrigger:{trigger: element} , y:200, opacity: 0, ease: Power4.ease, duration: 0.7})
+        });
+    </script>
 </body>
 </html>
