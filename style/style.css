@@ -43,7 +43,7 @@ section.main-one .container .content-box p:nth-child(3){font-size: 30px;padding:
 section.main-two{margin-bottom: 100px;}
 section.main-two .container{ width: 90%; margin: 0 auto;}
 section.main-two .container .title{margin: 10px 0;}
-section.main-two .container .title h3{ font-size: 18px; font-family:"Kastelov-Kinetika-Ultra"; color: #414141; letter-spacing: 5px; text-transform: uppercase;}
+section.main-two .container .title h4{ font-size: 18px; font-family:"Kastelov-Kinetika-Ultra"; color: #414141; letter-spacing: 5px; text-transform: uppercase;}
 section.main-two .container .content{width: 35%; margin: 25px 0;}
 section.main-two .container .content p{ font-size: 30px; color: #fff; }
 section.main-two .container .links p {font-size: 25px; color: #a5a5a5;}
