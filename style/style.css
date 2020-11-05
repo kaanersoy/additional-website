@@ -1,10 +1,12 @@
 @font-face {
     font-family: "Kastelov-Kinetika-Light";
     src: url("./fonts/Kastelov-Kinetika-Light.otf");
+    font-display: swap;
 }
 @font-face {
     font-family: "Kastelov-Kinetika-Ultra";
     src: url("./fonts/Kastelov-Kinetika-Ultra.otf");
+    font-display: swap;
 }
 html{
     scroll-behavior: smooth;
@@ -26,7 +28,7 @@ body{
 header{padding: 15px; position: sticky; top: 0; left: 0;background-color: rgba(0, 0, 0, 0.2); z-index: 999;}
 header .header-wrapper{display: flex;align-items: center; justify-content: space-between;}
 header .header-wrapper .logo{width: 80px;}
-header .header-wrapper .logo img{width: 100%; display: block;}
+header .header-wrapper .logo img{width: 100%; display: block;height: auto;}
 header .header-wrapper .links{}
 header .header-wrapper .links ul{list-style-type: none;}
 header .header-wrapper .links ul li{ display: inline; margin: 0 10px;}
@@ -43,7 +45,7 @@ section.main-one .container .content-box p:nth-child(3){font-size: 30px;padding:
 section.main-two{margin-bottom: 100px;}
 section.main-two .container{ width: 90%; margin: 0 auto;}
 section.main-two .container .title{margin: 10px 0;}
-section.main-two .container .title h2{ font-size: 18px; font-family:"Kastelov-Kinetika-Ultra"; color: #414141; letter-spacing: 5px; text-transform: uppercase;}
+section.main-two .container .title h2{ font-size: 18px; font-family:"Kastelov-Kinetika-Ultra"; color: #888888; letter-spacing: 5px; text-transform: uppercase;}
 section.main-two .container .content{width: 35%; margin: 25px 0;}
 section.main-two .container .content p{ font-size: 30px; color: #fff; }
 section.main-two .container .links p {font-size: 25px; color: #a5a5a5;}
@@ -61,7 +63,7 @@ section.main-three .container .content-wrapper .box .product-title a{text-decora
 section.main-three .container .content-wrapper .box .product-title h4{font-family:"Kastelov-Kinetika-Ultra";font-size: 35px;color: #fff;}
 section.main-three .container .content-wrapper .box .img-container{width: 100%;}
 section.main-three .container .content-wrapper .box .img-container a{text-decoration: none;}
-section.main-three .container .content-wrapper .box .img-container img{width: 100%; display: block;}
+section.main-three .container .content-wrapper .box .img-container img{width: 100%; display: block;height: auto;}
 section.main-three .container .content-wrapper .box.right{align-self: flex-end;}
 
 footer{padding-top: 50px; background-color: #161616;}
