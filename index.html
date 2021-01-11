@@ -64,6 +64,14 @@
                 <h3>Products</h3>
             </div>
             <div class="content-wrapper" id="product-container">
+                <div class="box left">
+                    <div class="product-title">
+                        <a href="http://www.slicer.fun/" rel="nofollow" title="Saruhan Web Agency" target="_blank"><h4>SLICER | URL Shortener</h4></a>
+                    </div>
+                    <div class="img-container">
+                        <a href="http://www.slicer.fun/" rel="nofollow" title="Saruhan Web Agency" target="_blank"><img src="img/slicer-project.PNG" alt="Personal Project"></a>
+                    </div>
+                </div>
                 <div class="box right">
                     <div class="product-title">
                         <a  href="http://kaanersoy.com/" rel="nofollow" title="Kaan Ersoy Website" target="_blank"><h4>Personal Website</h4></a>
@@ -107,27 +115,6 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" integrity="sha512-wK2NuxEyN/6s53M8G7c6cRUXvkeV8Uh5duYS06pAdLq4ukc72errSIyyGQGYtzWEzvVGzGSWg8l79e0VkTJYPw==" crossorigin="anonymous"></script>
-    <script>
-        gsap.registerPlugin("ScrollTrigger");
-        var tl1 = gsap.timeline();
-        let main1Childs = gsap.utils.toArray("#about>.container>.content-box");
-        main1Childs.forEach((element) => {
-            gsap.from(element, {y:50, opacity: 0, ease: Power4.ease, duration: 0.8});
-        });
-        let main2Childs = gsap.utils.toArray(".main-two>.container");
-        var counter1 = 0;
-        main2Childs.forEach((element) => {
-            if(counter1 == 0){
-                tl1.from(element, {y: 70, opacity: 0, ease: Power4.ease, duration:0.8});
-                counter1++;
-            }else{
-                tl1.from(element, {y: 70, opacity: 0, ease: Power4.ease, duration:0.6}, "-=0.2");
-            }
-        });
-        var productChilds = gsap.utils.toArray(document.getElementById("product-container").children);
-        productChilds.forEach((element) => {
-            gsap.from(element, {scrollTrigger:{trigger: element} , y:200, opacity: 0, ease: Power4.ease, duration: 0.7})
-        });
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>
