@@ -8,6 +8,7 @@
     src: url("./fonts/Kastelov-Kinetika-Ultra.otf");
     font-display: swap;
 }
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
 html{
     scroll-behavior: smooth;
 }
@@ -33,36 +34,38 @@ header .header-wrapper .links ul{list-style-type: none;}
 header .header-wrapper .links ul li{ display: inline; margin: 0 10px;}
 header .header-wrapper .links ul li a{color: #fff; font-size: 20;text-decoration: none; font-weight: bold;}
 
-section.main-one{margin-bottom: 80px;}
+section.main-one{margin-bottom: 80px;scroll-margin: 300px}
 section.main-one .container{ width: 80%; margin: 0 auto;}
 section.main-one .container .content-box{ width: 100%;}
 section.main-one .container .content-box h1{ display: none;}
 section.main-one .container .content-box p{text-align: center; width: 100%;font-size: 80px; color: #fff;}
 section.main-one .container .content-box p span{display: inline; font-family:"Kastelov-Kinetika-Ultra";color: #b5d0ff; font-size: 130px; }
-section.main-one .container .content-box p:nth-child(3){font-size: 30px;padding: 20px 0;}
+section.main-one .container .content-box p:nth-child(3){font-size: 30px;padding: 20px 0; font-family: 'Anonymous Pro', monospace;}
 
 section.main-two{margin-bottom: 100px;}
 section.main-two .container{ width: 90%; margin: 0 auto;}
 section.main-two .container .title{margin: 10px 0;}
-section.main-two .container .title h2{ font-size: 18px; font-family:"Kastelov-Kinetika-Ultra"; color: #888888; letter-spacing: 5px; text-transform: uppercase;}
-section.main-two .container .content{width: 35%; margin: 25px 0;}
-section.main-two .container .content p{ font-size: 30px; color: #fff; }
+section.main-two .container .title h2{ font-size: 18px; font-family:"Kastelov-Kinetika-Ultra"; color: #b5d0ff; letter-spacing: 5px; text-transform: uppercase;}
+section.main-two .container .content{width: 35%; margin: 18px 0;}
+section.main-two .container .content p{ font-size: 30px; color: #fff;}
+section.main-two .container .content p span{ font-size: 23px; color: #fff;}
 section.main-two .container .links p {font-size: 25px; color: #a5a5a5;}
 section.main-two .container .links p span{margin: 0 10px;}
 section.main-two .container .links p a{font-family:"Kastelov-Kinetika-Ultra"; font-size: 23px; text-decoration: none; color: #b5d0ff;}
 
-section.main-three{padding: 30px;overflow: hidden;}
-section.main-three .container{ width: 90%; margin: 0 auto;}
+section.main-three{padding: 30px;scroll-margin: 300px;scroll-margin: 100px;}
+section.main-three .container{ width: 90%; margin: 0 auto;overflow-y: hidden;}
 section.main-three .container .section-title{text-align: center; }
 section.main-three .container .section-title h3{font-size: 60px;font-family:"Kastelov-Kinetika-Ultra"; color:#b5d0ff; text-transform: uppercase;}
 section.main-three .container .content-wrapper{width: 100%; display: flex; flex-direction: column;}
 section.main-three .container .content-wrapper .box{width: 50%; display: block;margin: 50px 0;}
+section.main-three .container .content-wrapper .box:hover{transform: scale(1.02);}
 section.main-three .container .content-wrapper .box .product-title{padding: 25px 0;}
 section.main-three .container .content-wrapper .box .product-title a{text-decoration: none;}
 section.main-three .container .content-wrapper .box .product-title h4{font-family:"Kastelov-Kinetika-Ultra";font-size: 35px;color: #fff;}
 section.main-three .container .content-wrapper .box .img-container{width: 100%;}
 section.main-three .container .content-wrapper .box .img-container a{text-decoration: none;}
-section.main-three .container .content-wrapper .box .img-container img{width: 100%; display: block;height: auto;border: 1px solid #fff;}
+section.main-three .container .content-wrapper .box .img-container img{width: 100%; display: block;height: auto;border: 2px solid rgb(97, 97, 97);}
 section.main-three .container .content-wrapper .box.right{align-self: flex-end;}
 
 footer{padding-top: 50px; background-color: #161616;overflow: hidden;}
