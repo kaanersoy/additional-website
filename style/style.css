@@ -29,7 +29,6 @@ header{padding: 15px; position: sticky; top: 0; left: 0;background-color: rgba(0
 header .header-wrapper{display: flex;align-items: center; justify-content: space-between;}
 header .header-wrapper .logo{width: 80px;}
 header .header-wrapper .logo img{width: 100%; display: block;height: auto;}
-header .header-wrapper .links{}
 header .header-wrapper .links ul{list-style-type: none;}
 header .header-wrapper .links ul li{ display: inline; margin: 0 10px;}
 header .header-wrapper .links ul li a{color: #fff; font-size: 20;text-decoration: none; font-weight: bold;}
