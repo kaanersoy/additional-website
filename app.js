@@ -1,3 +1,41 @@
+// var itemsToLoad = document.querySelectorAll('link, img')
+
+// var loadedItems = []
+
+// console.log(itemsToLoad);
+
+// itemsToLoad.forEach(function(item){
+//     item.addEventListener('load', function(){
+//         console.log(this);
+//     })
+// });
+
+
+window.addEventListener('load',function(){
+    document.querySelector('.preloader').classList.add("loaded");
+    classListToggler(document.querySelector("#preloader-flicked"));
+    setTimeout(function(){
+        document.querySelector('.preloader').classList.add("invisible");
+    },200);
+});
+
+
+
+function classListToggler(item){
+    var intervalCounter = 0;
+    var interval = setInterval(function(){
+        item.classList.add("invisible");
+        setTimeout(() => {
+            item.classList.remove("invisible");
+        }, 400);
+        intervalCounter++;
+        if(intervalCounter > 5){
+            clearInterval(interval);
+        }
+    }, 800)
+}
+
+
 gsap.registerPlugin("ScrollTrigger");
 var tl1 = gsap.timeline();
 let main1Childs = gsap.utils.toArray("#about>.container>.content-box");

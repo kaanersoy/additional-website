@@ -14,10 +14,11 @@ html{
 }
 *{
     box-sizing: border-box;
-    font-family: "Kastelov-Kinetika-Light";
+    
 }
 body{
     width: 100%;
+    font-family: "Kastelov-Kinetika-Light";
 }
 *, body, html{
     margin: 0;
@@ -26,7 +27,7 @@ body{
 body{
     background-color: #101010;
 }
-header{padding: 15px; position: sticky; top: 0; left: 0;background-color: rgba(0, 0, 0, 0.2); z-index: 999;}
+header{padding: 15px; position: sticky; top: 0; left: 0;background-color: rgba(0, 0, 0, 0.2); z-index: 99;}
 header .header-wrapper{display: flex;align-items: center; justify-content: space-between;}
 header .header-wrapper .logo{width: 80px;}
 header .header-wrapper .logo img{width: 100%; display: block;height: auto;}
@@ -121,4 +122,22 @@ footer .footer-wrapper .links .pages ul li a:hover::after{width: 100%;}
     footer .footer-wrapper{display: block;}
     footer .footer-wrapper .contacts{ text-align: center;margin-bottom: 30px;}
     footer .footer-wrapper .links{ text-align: center;}
+}
+
+.preloader{ position: fixed; top: 0; left: 0; z-index: 999;background-color: #101010;height: 100vh;width: 100%; transition: 200ms ease-in;display: flex;align-items: center; justify-content: center;}
+.preloader.loaded{opacity: 0;}
+.preloader.invisible{display: none; visibility: hidden;}
+.preloader .content-wrapper{width: 144px; height: 144px;}
+.preloader .content-wrapper p{color: #fff; text-align: center;}
+.preloader .content-wrapper span{transition: 100ms;}
+.preloader .content-wrapper span.invisible{opacity: 0;}
+.preloader .content-wrapper img{ animation: infiniteCircle 5s linear infinite; margin-bottom: 20px;}
+
+@keyframes infiniteCircle{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
