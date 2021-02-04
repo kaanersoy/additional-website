@@ -127,13 +127,16 @@ footer .footer-wrapper .links .pages ul li a:hover::after{width: 100%;}
 .preloader{ position: fixed; top: 0; left: 0; z-index: 999;background-color: #101010;height: 100vh;width: 100%; transition: 200ms ease-in;display: flex;align-items: center; justify-content: center;}
 .preloader.loaded{opacity: 0;}
 .preloader.invisible{display: none; visibility: hidden;}
-.preloader .content-wrapper{width: 144px; height: 144px;}
-.preloader .content-wrapper p{color: #fff; text-align: center;}
-.preloader .content-wrapper span{transition: 100ms;}
-.preloader .content-wrapper span.invisible{opacity: 0;}
-.preloader .content-wrapper img{ animation: infiniteCircle 5s linear infinite; margin-bottom: 20px;}
 
-@keyframes infiniteCircle{
+.preloader .content-wrapper{width: 100px; height: 100px;}
+.preloader .content-wrapper svg{}
+.preloader .content-wrapper svg circle{}
+.preloader .content-wrapper svg #circle{ stroke: #353535; stroke-width: 5;}
+.preloader .content-wrapper svg #loading-circle{stroke-dasharray: 290;stroke-dashoffset: 290;transition: 150ms ease-out; stroke: #e0449f; stroke-width: 5;}
+.preloader .content-wrapper svg #check{fill: none;stroke-width: 1px;stroke: #fff;stroke-dasharray: 98; stroke-dashoffset: 98;transition: 200ms;}
+.preloader .content-wrapper svg #check.loaded{ stroke-dashoffset: 0;}
+
+@keyframes imagesLoaded{
     0%{
         transform: rotate(0deg);
     }

@@ -1,40 +1,41 @@
-// var itemsToLoad = document.querySelectorAll('link, img')
-
-// var loadedItems = []
-
-// console.log(itemsToLoad);
-
-// itemsToLoad.forEach(function(item){
-//     item.addEventListener('load', function(){
-//         console.log(this);
-//     })
-// });
-
-
 window.addEventListener('load',function(){
-    document.querySelector('.preloader').classList.add("loaded");
-    classListToggler(document.querySelector("#preloader-flicked"));
-    setTimeout(function(){
-        document.querySelector('.preloader').classList.add("invisible");
-    },200);
+    if(loadedImages < images.length){
+        SvgAnimator(loadingSVGCircle, images.length, images.length, 290);
+    }
+    animationWithTimeOut();
 });
 
+const images = document.querySelectorAll("img");
+const loadingSVGCircle = document.getElementById("loading-circle");
+const loadingCheck = document.getElementById("check");
+const preloader = document.querySelector(".preloader");
 
+var loadedImages=0;
+images.forEach((img) => {
+    img.addEventListener("load",function(){
+        loadedImages++;
+        console.log("i am loaded")
+        SvgAnimator(loadingSVGCircle, loadedImages, images.length, 290);
+    })
+});
 
-function classListToggler(item){
-    var intervalCounter = 0;
-    var interval = setInterval(function(){
-        item.classList.add("invisible");
-        setTimeout(() => {
-            item.classList.remove("invisible");
-        }, 400);
-        intervalCounter++;
-        if(intervalCounter > 5){
-            clearInterval(interval);
-        }
-    }, 800)
+function animationWithTimeOut(){
+    setTimeout(function(){
+        loadingCheck.classList.add("loaded");
+        setTimeout(function(){
+            preloader.classList.add("loaded");
+            setTimeout(function(){
+                preloader.classList.add("invisible");
+            }, 300)
+        }, 300)
+    }, 300)
 }
 
+function SvgAnimator(el, loadedImageCount, maxImageCount, maxDashArray){
+    var result = maxDashArray - (maxDashArray * loadedImageCount/maxImageCount);
+    el.style.strokeDashoffset = result;
+    return true;
+}
 
 gsap.registerPlugin("ScrollTrigger");
 var tl1 = gsap.timeline();

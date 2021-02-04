@@ -117,12 +117,15 @@
 
     <div class="preloader">
         <div class="content-wrapper">
-            <img src="./img/kaanersoy-preloader-img.png" width="140px" height="140px" alt="Kaan Ersoy Preloader">
-            <p>loading <span id="preloader-flicked">...</span></p>
+            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle id="circle" cx="50" cy="50" r="45" stroke-width="5"/>
+                <circle id="loading-circle" cx="50" cy="50" r="45" stroke-width="5"/>
+                <path id="check" d="M44.6464 62.1464L36.2185 53.7185C36.0846 53.5846 36.0378 53.3865 36.0977 53.2068L37.2442 49.7675C37.3617 49.4149 37.8092 49.3092 38.0721 49.5721L44.6464 56.1464C44.8417 56.3417 45.1583 56.3417 45.3536 56.1464L62.1464 39.3536C62.3417 39.1583 62.6583 39.1583 62.8536 39.3536L65.1464 41.6464C65.3417 41.8417 65.3417 42.1583 65.1464 42.3536L45.3536 62.1464C45.1583 62.3417 44.8417 62.3417 44.6464 62.1464Z"/>
+            </svg>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" integrity="sha512-wK2NuxEyN/6s53M8G7c6cRUXvkeV8Uh5duYS06pAdLq4ukc72errSIyyGQGYtzWEzvVGzGSWg8l79e0VkTJYPw==" crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+    <script src="./app.js"></script>
 </body>
 </html>
